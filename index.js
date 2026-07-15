@@ -1,12 +1,34 @@
 var menuLinks = [
 
-  { text: 'about', href: '/about' },
+  {text: 'about', href: '/about'},
 
-  { text: 'catalog', href: '/catalog' },
+  {text: 'catalog', href: '#', subLinks: [
 
-  { text: 'orders', href: '/orders' },
+    {text: 'all', href: '/catalog/all'},
 
-  { text: 'account', href: '/account' },
+    {text: 'top selling', href: '/catalog/top'},
+
+    {text: 'search', href: '/catalog/search'},
+
+  ]},
+
+  {text: 'orders', href: '#' , subLinks: [
+
+    {text: 'new', href: '/orders/new'},
+
+    {text: 'pending', href: '/orders/pending'},
+
+    {text: 'history', href: '/orders/history'},
+
+  ]},
+
+  {text: 'account', href: '#', subLinks: [
+
+    {text: 'profile', href: '/account/profile'},
+
+    {text: 'sign out', href: '/account/signout'},
+
+  ]},
 
 ];
 
@@ -32,6 +54,9 @@ subMenuEl.style.height = "100";
 subMenuEl.style.backgroundColor = "var(--sub-menu-bg)";
 subMenuEl.classList.add("flex-around");
 
+subMenuEl.style.position ="absolute";
+subMenuEl.style.top = "0";
+
 for (let i = 0; i < menuLinks.length; i++){
 
     let newLink = document.createElement("a");
@@ -44,3 +69,14 @@ for (let i = 0; i < menuLinks.length; i++){
 
 
 }
+let topMenuLinks = topMenuEl.querySelectorAll("a");
+
+topMenuEl.addEventListener("click", function(event){
+  event.preventDefault();
+
+
+  if(event.target.tagName !== "A"){
+    return;
+  }
+  console.log(event.target.textContent);
+});
