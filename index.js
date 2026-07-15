@@ -20,6 +20,7 @@ mainEl.classList.add("flex-ctr");
 
 let topMenuEl = document.getElementById("top-menu");
 
+
 for (let i = 0; i < menuLinks.length; i++){
 
     let newLink = document.createElement("a");
@@ -27,7 +28,7 @@ for (let i = 0; i < menuLinks.length; i++){
     newLink.setAttribute("href", menuLinks[i].href);
     newLink.textContent = menuLinks[i].text;
 
-    topMenuEl.appendChild(newLink);
+    topMenuEl.appendChild(newLink);/
 
 
 
