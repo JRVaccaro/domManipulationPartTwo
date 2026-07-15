@@ -19,6 +19,9 @@ mainEl.innerHTML ="<h1> DOM Manipulation</h1>"
 mainEl.classList.add("flex-ctr"); 
 
 let topMenuEl = document.getElementById("top-menu");
+topMenuEl.style.height = "100";
+topMenuEl.style.backgroundColor = "var(--top-menu-bg)";
+topMenuEl.classList.add("flex-around");
 
 
 for (let i = 0; i < menuLinks.length; i++){
@@ -28,7 +31,7 @@ for (let i = 0; i < menuLinks.length; i++){
     newLink.setAttribute("href", menuLinks[i].href);
     newLink.textContent = menuLinks[i].text;
 
-    topMenuEl.appendChild(newLink);/
+    topMenuEl.appendChild(newLink);
 
 
 
