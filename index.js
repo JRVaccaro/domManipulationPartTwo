@@ -24,6 +24,14 @@ topMenuEl.style.backgroundColor = "var(--top-menu-bg)";
 topMenuEl.classList.add("flex-around");
 
 
+//sub menu
+
+let subMenuEl = document.getElementById("sub-menu");
+
+subMenuEl.style.height = "100";
+subMenuEl.style.backgroundColor = "var(--sub-menu-bg)";
+subMenuEl.classList.add("flex-around");
+
 for (let i = 0; i < menuLinks.length; i++){
 
     let newLink = document.createElement("a");
